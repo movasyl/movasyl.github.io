@@ -10,7 +10,7 @@
     
     <title>
         
-            Архів: 2017/4 | 
+            Кілька думок про Vue.Js | 
         
         KOVBASSA BLOG
     </title>
@@ -32,7 +32,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Vasyl Moldovan">
     <meta name="description" content="Here are my own notes and translations of other materials into my native language, which I found interesting from the field of programming and web technologies.">
-    <meta name="keywords" content="null">
+    <meta name="keywords" content="null,VueJS,javascript,framework">
 
     <!-- Favicons -->
     <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
@@ -58,9 +58,9 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://movasyl.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Архів: 2017/4 | KOVBASSA BLOG">
+    <meta property="og:title" content="Кілька думок про Vue.Js | KOVBASSA BLOG">
     <meta property="og:description" content="Here are my own notes and translations of other materials into my native language, which I found interesting from the field of programming and web technologies.">
-    
+    <meta property="og:article:tag" content="VueJS"> <meta property="og:article:tag" content="javascript"> <meta property="og:article:tag" content="framework"> 
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -221,153 +221,220 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
 
-    <!-- Normal Post -->
-    
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
         
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="vue.jpg">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(vue.jpg)">
     
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/04/27/Кілька-думок-про-Vue-Js/">Кілька думок про Vue.Js</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            переклад, оригінальна стаття за посиланням: 
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/04/27/Кілька-думок-про-Vue-Js/" target="_self">Більше...</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Vasyl Moldovan's avatar">
-            </div>
-            <div>
-                <strong>Vasyl Moldovan</strong>
-                <span>квіт 27, 2017</span>
-            </div>
+            <p class="article-headline-p">
+                Кілька думок про Vue.Js
+            </p>
         </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
+
+
+
+
+
                 
-            </span>
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
 
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
     </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Vasyl Moldovan</strong>
+        <span>квіт 27, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">devices other</i>
+            <span class="visuallyhidden">devices other</span>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+            <li class="mdl-menu__item">Читати на девайсі</li>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAADjUlEQVR42u3awW7jMAwE0P7/T+9eF1jEnSGlNAWeT0Xb2NLzYUKKX39c/1xfCHDgwIEDBw4cOHDg+GCOr/h6/tQ3jwzulqzq1f+s9oIDBw4cOC5wJJvJl/782Vd3e95estp2Lzhw4MCB4zbHq40lj2kjcBPMyavK94IDBw4cOD6B43mh+T3z2G5jGAcOHDhw/BaO53bbPmLbzePAgQMHjk/mKBpqAceplmJ7EPXWXikOHDhw4FgPNHz+z2+d78CBAwcOHP9xzK52fCGHbkvEA3vBgQMHDhxHOdowy0umTZmXP/HAf+LAgQMHjmsceYhutp0PNJxdVVHR4sCBAweONcfmEGgWn8mhVB7ts8jHgQMHDhw3ONoPJxz5EmfjCEm7sIhqHDhw4MBxmSNv1bVBmB815a8qfyVRcxAHDhw4cKw59kVRHm9J4y8fX9gcX+HAgQMHjnscbUy+euS+JMuDdlbO1d87cODAgQPHiKM4+A/Kp7aU2gRz8nP0VQAHDhw4cFzjmB0gzRpzbcGWH1y1oxI4cODAgeM9HM/RtR9la7HatiAOHDhw4PhZjk1zbRPY+/GFWWmHAwcOHDjewzE7IpqNuLX33ww0fNNqxIEDBw4cRzk2odUWYG0RmA83HCvhcODAgQPHG5uDSby1RVfOmh991eMROHDgwIHjKEcSde0Y3KyR15ZqbVGHAwcOHDjeydEONMzKuXZ4Yna4VTc9ceDAgQPHBY5T0ZuHXN5AzF9P+zpx4MCBA8c9jk0LbxbJbTnXxnBxGIYDBw4cOC5wtEc1SVvw1PBc+zLqgQwcOHDgwHGUoy148sXl7bmWYPYaXv4eBw4cOHBc45iVVe3RUf7XdiSifQoOHDhw4LjB8fyw2VaTgrA9rNoPRkRBiwMHDhw41hyzQN0UgUnRdfsQCwcOHDhw3ONoC7lZqTYbsGuBZqPYOHDgwIHjLEcSk+1R0B5iRtNGOA4cOHDguMExGzhoF9EWeDO49isCDhw4cOC4wXF2e3kM57GdRPWm4MSBAwcOHDc4knBNxh0SxOQ1zKL3WNDiwIEDB45DHHmArZpxo8OhTXPwGzgcOHDgwPGjHMkARNvC2wfthhgHDhw4cPwsR7Lctqm3Ga1oX8mVEg4HDhw4cKybgwnf2bGG2Wej3+PAgQMHjgsceVvt1LZnMdwWeNEdcODAgQPHUQ4XDhw4cODAgQMHDhw4Puz6C484BxdFKv5gAAAAAElFTkSuQmCC">
+        </ul>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/VueJS/">VueJS</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/framework/">framework</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/javascript/">javascript</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Кілька думок про Vue.Js&url=https://movasyl.github.io//2017/04/27/Кілька-думок-про-Vue-Js/index.html&via=Vasyl Moldovan" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://movasyl.github.io//2017/04/27/Кілька-думок-про-Vue-Js/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://movasyl.github.io//2017/04/27/Кілька-думок-про-Vue-Js/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
 </div>
 
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/04/26/hello-world/">Hello World</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Welcome to Hexo
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/04/26/hello-world/" target="_self">Більше...</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Vasyl Moldovan's avatar">
-            </div>
-            <div>
-                <strong>Vasyl Moldovan</strong>
-                <span>квіт 26, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
                 
-            </span>
 
-            
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p><em>переклад, оригінальна стаття за посиланням: <a href="https://medium.com/@huiqizhou1989/several-thoughts-on-vue-js-6c8ef05c86a7" target="_blank" rel="external">medium.com/@huiqizhou1989</a></em></p>
+<p><a href="https://vuejs.org/" target="_blank" rel="external">Vue.js</a> is a framework that helps developers build web application. This is not the first framework that I encountered. I have a little bit experience with Handlebars and AngularJS. Handlebars is very easy to pick up. But there’s limitation when you want to bind the data, such as you can’t really do much computation when you use double curly brackets to bind your data in the front end. AngularJS separates the states and the controllers and you have to do much more set-up comparing to Handlebars.<br>I will talk about several things that I like about Vue.js here:<br>The guide for Vue.js 2.0 is very well written and includes a lot of useful examples. As a beginner to web application frameworks, reading original documentations is not the easiest task for me. But I found that most of the time I can follow the guide.<br>I like the idea about components. components are templates that includes its own html, scripts and styles. If you are developing a relatively large application, you might want to do it little by little. There might be a lot of repetitive part on every page. With components, you don’t have to rewrite or restyle it. You can separate and combine them as much (or little) as you like. You can use components inside other components, which make creating flexible layout much more easier. I have to admit that I was fascinated about the idea of components when I first knew about it. It makes your codes much more reusable. You can even swap components by just creating a “component” tag with a “is” attribute, or use “slot” tag in order to flexibly mount the component to a target div.<br>Data and event handling are easy. Just like AngularJS controllers, you can include data and method when you set up a component. And by using “props” and “events”, you can easily use the data and method of the parents or children components. That make data and event handling able to be done mostly in front end. When I work with Handlebars, I have to write most of the algorithms and logic in the backend.<br>Setting up can be pretty simple. If you just want to use it for a single part of your application. You just need to set up a script tag and open a new Vue instance. So I believe it’s very friendly for small applications.<br>Instance lifecycle hooks are very handy. You can set up lifecycle hooks for every Vue instance. They are like event listeners for special “life stage” of the instance. For example, you can do something when the instance is “created”, “mounted”, “updated” or “destroyed”. It’s sort of like AngularJS controllers. But they are specifically “lifecycle-oriented.”<br>There’s vue-cli available with existing project templates. It’s recommended by Vue.js official site and it’s easy to use. I also find a express-vue module for wiring Vue templates with Express.<br>I will learn React in the next week and I will be back and talk about the similarities and differences between them.<br>Thanks for reading.</p>
 
-            
+    
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+
+
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/04/26/hello-world/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Новіша
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+</nav>
+
         </div>
     </div>
-</div>
 
-            
-            
-        
-    
-
-    
-
-    
-        <script>
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
-</script>
-
-    
-</div>
 
 
                     
